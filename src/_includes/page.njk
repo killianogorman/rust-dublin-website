@@ -1,0 +1,19 @@
+{% include "partials/htmlhead.njk" %}
+
+<header>
+
+<p class="logo"><a href="/"><img src="/images/rust.png" width="50" height="50" alt="Rust logo"></a></p>
+
+</header>
+
+<main>
+{% block content %}
+
+  <span style="font-family: alfa_slab; color:#552200"><h1>{{ title }}</h1></span>
+
+   <span style="font-family: fira_sans">{{ content | safe }}</span>
+
+{% endblock %}
+</main>
+
+<h5>{% include "partials/htmlfoot.njk" %}</h5>
