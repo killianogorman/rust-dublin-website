@@ -22,7 +22,7 @@ config.addPassthroughCopy('src/css');
 
     dir: {
       input: 'src',
-      output: 'build'
+      output: 'docs'
     }
 
   };
