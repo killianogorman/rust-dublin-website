@@ -10,8 +10,9 @@ config.addPlugin(embedYouTube);
 // sends images from src to build
 config.addPassthroughCopy('src/images');
 
-// sends fonts from src to build... i hope
+// sends fonts from src to build
 config.addPassthroughCopy('src/fonts');
+
 
   // 11ty defaults
   return {
