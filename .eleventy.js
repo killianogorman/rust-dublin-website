@@ -13,6 +13,9 @@ config.addPassthroughCopy('src/images');
 // sends fonts from src to build
 config.addPassthroughCopy('src/fonts');
 
+// sends css from src to build
+config.addPassthroughCopy('src/css');
+
 
   // 11ty defaults
   return {
