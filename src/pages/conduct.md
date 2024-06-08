@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Layout.astro"
+layout: "../layouts/Legal.astro"
 ---
 # CODE OF CONDUCT
 

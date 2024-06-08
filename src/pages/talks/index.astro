@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+const allPosts = await getCollection("talks");
+---
+
+<Layout title="" description="" keywords="">
+  <main class="pt-36 px-44 lg:px-60 pb-16 min-h-[55vh] w-full text-blk">
+    <div class="w-full border-b-[1px] border-dashed border-blk pb-6 mb-8">
+        <h1 class="text-7xl font-alfa-slab pb-4">Talks Archive</h1>
+        <p>Here is all the info relating to talks done for Rust dublin.</p>
+        <p>Each talk is organized by date and speaker, with links to slides, videos, and other resources where available. Browse through our catalog to discover insightful discussions and deep dives into various Rust topics presented by our community members.</p>
+        <aside class="pt-3">Done a talk? Not Listed? If your talk isnt listed please go to <a href="https://gihub.com/rust-dublin/website" class=" underline">gihub.com/rust-dublin/website</a> and open a pull request.</aside>
+    </div>
+    <div class="w-full flex flex-col gap-8">
+      {
+        allPosts.reverse().map((e) => {
+          return (
+            <a class="p-9 w-full px-5 border-blk border-[1.4px] bg-wh hover:drop-shadow-[3px_4px_rgba(0,0,0,1)] transition-all duration-150" href={"/talks/" + e.slug}>
+              <article class="w-full" title={e.data.title}>
+                {/* Top Bar */}
+                <div class="flex items-center pb-8 gap-3">
+                  <div class="pt-3 pb-2 flex gap-3 text-sm uppercase w-full overflow-hidden flex-wrap">
+                    {e.data.tags.slice(1,4).map((v) => {
+                      return (
+                        <div class=" py-1 px-3 border-blk border-[1.4px] rounded-full hover:bg-yeller hover:text-blk hover:drop-shadow-[3px_4px_rgba(0,0,0,1)] transition-all">
+                          {v}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <h3>
+                    <span>{e.data.pubDate.toLocaleDateString()}</span>
+                  </h3>
+                </div>
+                {/* Title Description */}
+                <div class="flex flex-col">
+                  <h1 class=" text-4xl pb-3 font-alfa-slab">{e.data.title}</h1>
+                  <p>{e.data.description}</p>
+                </div>
+                {/* Author */}
+                <div></div>
+              </article>
+            </a>
+          );
+        })
+      }
+    </div>
+  </main>
+</Layout>
