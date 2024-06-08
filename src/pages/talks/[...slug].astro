@@ -8,19 +8,22 @@ export async function getStaticPaths() {
     params: { slug: entry.slug }, props: { entry },
   }));
 }
-
+//@ts-expect-error
 export async function get({ params }) {
   const talks = await getCollection('talks');
   const people = await getCollection('people');
 
   const entry = talks.find(talk => talk.slug === params.slug);
+  //@ts-expect-error
   const authorData = people.find(person => person.slug === entry.data.author);
 
   if (!authorData) {
+    //@ts-expect-error
     throw new Error(`Author data for slug '${entry.data.author}' not found in people collection`);
   }
 
   const props = {
+    //@ts-expect-error
     ...entry.data,
     author: {
       name: authorData.data.name,

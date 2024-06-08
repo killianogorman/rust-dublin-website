@@ -19,7 +19,7 @@ const talksCollection = defineCollection({
 const peopleCollection = defineCollection({
   type: "content",
   schema: z.object({
-    slug: z.string(),
+    // slug: z.string(),
     name: z.string(),
     bio: z.string(),
     image: z.object({

@@ -1,5 +1,4 @@
 ---
-    slug: 'nowak'
     name: 'Dawid Nowak'
     bio: ''
     image: 
@@ -8,7 +7,7 @@
     tags: ["organiser",'Dawid Nowak',"nowak"]
     urls: ["https://github.com/swir-rs","https://github.com/dawid-nowak"]
     company_info: 
-        position: NULL
-        name: NULL
-        company_bio: NULL
+        position: 'NULL'
+        name: 'NULL'
+        company_bio: 'NULL'
 ---

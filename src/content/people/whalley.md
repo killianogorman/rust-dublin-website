@@ -1,5 +1,4 @@
 ---
-    slug: 'whalley'
     name: 'Anton Whalley'
     bio: ''
     image: 
@@ -8,7 +7,7 @@
     tags: ["Anton Whalley","whalley"]
     urls: ["https://github.com/No9"]
     company_info: 
-        position: NULL
-        name: NULL
-        company_bio: NULL
+        position: 'NULL'
+        name: ''
+        company_bio: 'NULL'
 ---
