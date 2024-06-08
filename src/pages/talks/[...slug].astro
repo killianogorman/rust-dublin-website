@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-// import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro';
+import Talk from '../../layouts/Talk.astro';
 
 export async function getStaticPaths() {
   const talks = await getCollection('talks');
@@ -9,6 +9,46 @@ export async function getStaticPaths() {
   }));
 }
 
+export async function get({ params }) {
+  const talks = await getCollection('talks');
+  const people = await getCollection('people');
+
+  const entry = talks.find(talk => talk.slug === params.slug);
+  const authorData = people.find(person => person.slug === entry.data.author);
+
+  if (!authorData) {
+    throw new Error(`Author data for slug '${entry.data.author}' not found in people collection`);
+  }
+
+  const props = {
+    ...entry.data,
+    author: {
+      name: authorData.data.name,
+      slug: authorData.slug,
+      bio: authorData.data.bio,
+      image: authorData.data.image,
+      urls: authorData.data.urls,
+    },
+  };
+
+  return {
+    props,
+  };
+}
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const { title, description, author, tags, image, event_location, video_url, slides_url } = entry.data;
 ---
+<Talk 
+  title={title}
+  description={description}
+  author={JSON.stringify(author)}
+  tags={tags}
+  image={image}
+  event_location={event_location}
+  video_url={video_url}
+  slides_url={slides_url}
+>
+  <Content/>
+</Talk>

@@ -7,12 +7,12 @@ const talksCollection = defineCollection({
     description: z.string(),
     author: z.string(),
     image: z.object({
-      url: z.string(),
+      src: z.string(),
       alt: z.string(),
     }),
     event_location: z.string(),
     video_url: z.string(),
-    slides_url: z.string(),
+    slides_url: z.nullable(z.string()),
     tags: z.array(z.string()),
   }),
 });
