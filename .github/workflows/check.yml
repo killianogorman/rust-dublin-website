@@ -1,14 +1,14 @@
 name: Check Markdown and Text files for profanity
 on:
   push:
-    paths:
-    - '**.md'
-    - '**.mdx'
-    - '**.json'
-    - 'README'
-    - '**.toml'
     branches:
       - main
+    paths:
+      - '**.md'
+      - '**.mdx'
+      - '**.json'
+      - 'README'
+      - '**.toml'
 
 jobs:
   setup_environment:
