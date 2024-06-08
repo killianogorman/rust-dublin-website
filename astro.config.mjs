@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://astronaut.github.io",
-  // base: 'rust-dublin-website',
+  base: 'rust-dublin-website',
 });
