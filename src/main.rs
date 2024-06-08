@@ -26,7 +26,7 @@ async fn main() {
         if path.is_file() {
             let content = fs::read_to_string(&path).unwrap();
             println!("{content}");
-            let char_chunks = split_into_chunks(&content, 32);
+            let char_chunks = split_into_chunks(&content, 22);
 
             for chunk in char_chunks {
                 let contains_profanity = check_profanity(&chunk).await;
