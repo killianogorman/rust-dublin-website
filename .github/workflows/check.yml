@@ -2,11 +2,11 @@ name: Check Markdown and Text files for profanity
 on:
   push:
     paths:
-    - "**.md"
-    - "**.mdx"
-    - "**.json"
-    - "README"
-    - "**.toml"
+    - '**.md'
+    - '**.mdx'
+    - '**.json'
+    - 'README'
+    - '**.toml'
     branches:
       - main
 
