@@ -11,8 +11,6 @@ on:
         - "**.mjs"
         - "src/**"
         - "public/**"
-    paths-ignore:
-        - '.github/workflows/build.yml'
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 

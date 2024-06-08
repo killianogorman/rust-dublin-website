@@ -5,8 +5,9 @@ export default {
 		extend: {
 			colors:{
 				'pink':"#FF91AF",
-				blk:"#161616",
-				wh:'#EDEAE0'
+				blk:"#121212",
+				wh:'#EDEAE0',
+				yeller:'#FFD700'
 			},
 			fontFamily:{
 				'alfa-slab':'Alfa Slab One',

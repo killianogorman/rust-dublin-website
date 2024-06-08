@@ -1,31 +1,52 @@
 ---
 import Logo from "./Logo.astro";
+import gsap from "gsap";
 ---
 
-<nav class="fixed flex flex-row justify-between px-9 py-5 items-center text-lg w-[100vw] z-50">
-    <a href="/" class="flex items-center gap-5">
-        <div class="h-10 w-10">
-            <Logo />
-        </div>
-        <h1>Rust Dublin</h1>
-    </a>
-    <div>
-        <ul class="flex flex-row gap-4">
-            <li>
-                <a href="/about">About</a>
-            </li>
-            <li>
-                <a href="/events">Events</a>
-            </li>
-            <li>
-                <a href="/resources">Resources</a>
-            </li>
-            <li>
-                <a href="/blog">Blog</a>
-            </li>
-            <li>
-                <a href="/contact">Contact</a>
-            </li>
-        </ul>
+<nav
+  class="fixed flex flex-row justify-between px-9 py-5 items-center text-lg w-[100vw] z-50"
+>
+  <a href="/" class="flex items-center gap-5">
+    <div class="h-10 w-10">
+      <Logo />
     </div>
+    <h1 class="font-semibold">Rust Dublin</h1>
+  </a>
+  <div>
+    <ul class="flex flex-row gap-4">
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/talks">Talks</a>
+      </li>
+      <li>
+        <a href="/resources">Resources</a>
+      </li>
+      <li>
+        <a href="/blog">Blog</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+<script>
+  import gsap from "gsap";
+  document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector("nav");
+    const navHeight = nav?.offsetHeight ?? 0;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > navHeight) {
+        gsap.to(nav, {
+          backgroundColor: "#EDEAE0",
+          duration: 0.3,
+        });
+      } else {
+        gsap.to(nav, { backgroundColor: "rgba(237,234,224,0.0)", duration: 0.3 });
+      }
+    });
+  });
+</script>
