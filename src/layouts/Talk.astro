@@ -26,14 +26,14 @@ const {
 } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description} keywords="">
   <main class="pt-16 px-28 text-lg">
     <section class="flex justify-between gap-12 pt-10">
       <div class=" w-[55%] pr-11">
         <p class="font-semibold">{author}</p>
         <h1 class="font-alfa-slab text-4xl">{title}</h1>
         <p>{description}</p>
-        <div class="pt-3 flex gap-3 text-sm uppercase">
+        <div class="pt-3 flex gap-3 text-sm uppercase w-full overflow-hidden flex-wrap">
           {
             tags.map((tag) => (
               <a href={`/talks?tags=[${tag}]`} class=" py-1 px-3 border-blk border-[1.4px] rounded-full">

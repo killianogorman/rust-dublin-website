@@ -2,7 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Rust Dublin">
+<Layout
+  title="Rust Dublin"
+  description="Join our vibrant community of passionate developers and enthusiasts exploring the power and potential of the Rust programming language."
+  keywords="rust,coding,dublin"
+>
   <main class="pt-16 px-8">
     <section class="flex relative h-[100vh] items-center justify-between">
       <div class="w-96">
@@ -16,49 +20,44 @@ import Layout from "../layouts/Layout.astro";
           <a
             href="#"
             class="bg-pink px-5 py-3 rounded-full font-black drop-shadow-[3px_4px_rgba(0,0,0,1)]"
-            style="height: 0%;"
-            >See Schedule</a
+            style="height: 0%;">See Schedule</a
           >
-          <a
-            href="/sponsors"
+          <a href="/sponsors"
             class="px-5 py-3 rounded-full border-2 border-blk font-alfa-slab"
             >Sponsor Event</a
           >
         </div>
       </div>
       <div class="absolute top-auto bottom-0 left-0 right-0 flex flex-col">
-        <h4 class="text-center font-bold">Our Wonderful Sponsors</h4>
-        <div class="flex px-20 justify-between">
+        <h4 class="text-center text-3xl font-bold pb-4">
+          Our Wonderful Sponsors
+        </h4>
+        <div class="flex px-20 justify-around">
           <img
-            src="https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg.png"
+            src="/sponsors/evervault/logo.png"
             loading="lazy"
             sizes="(max-width: 767px) 76.796875px, 133.09375px"
-            srcset="https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg-p-500.png 500w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg-p-800.png 800w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg-p-1080.png 1080w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg-p-1600.png 1600w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg-p-2000.png 2000w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df21579ff875722cd553_Airbnb%20Logo%20Be%CC%81lo.svg.png 2560w"
-            alt=""
             class="spns-imgs"
+            alt="Evervault Logo"
           /><img
+            src="/sponsors/martinsenmayer/logo.svg"
+            loading="lazy"
+            alt="Martinsen Mayer Logo"
+            class="spns-imgs"
+          />
+          <img
             src="https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20cd6e7a2fa5c7b16f_Rust%20Nation%2024%20logo.svg"
             loading="lazy"
-            alt=""
-            class="spns-imgs"
-          /><img
-            src="https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg.png"
-            loading="lazy"
-            sizes="(max-width: 767px) 104.84375px, 181.703125px"
-            srcset="https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg-p-500.png 500w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg-p-800.png 800w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg-p-1080.png 1080w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg-p-1600.png 1600w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg-p-2000.png 2000w, https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20eac13f69b10eb78f_Vercel%20logo%20black.svg.png 2560w"
-            alt=""
-            class="spns-imgs"
-          /><img
-            src="https://cdn.prod.website-files.com/6662d6fa17e519060c75691b/6662df20edcfe2c52fa88a6d_Github%20logo.png"
-            loading="lazy"
-            alt=""
+            alt="Martinsen Mayer Logo"
             class="spns-imgs"
           />
         </div>
       </div>
     </section>
     <section class="flex justify-between py-14">
-		<div class="w-2/6 lg:w-2/5 text-3xl lg:text-7xl font-bold"> <h1 class="">Get Ready for the next meetup</h1></div>
+      <div class="w-2/6 lg:w-2/5 text-3xl lg:text-7xl font-bold">
+        <h1 class="">Get Ready for the next meetup</h1>
+      </div>
       <div class="dates">
         <h1 class="text-5xl font-bold mb-3 uppercase">Upcoming Events</h1>
         <div>
@@ -87,7 +86,9 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
     <section class="flex flex-col py-8 items-center content-center">
-      <h1 class="text-3xl lg:text-5xl font-bold pb-5 font-alfa-slab">Why Rust Dublin</h1>
+      <h1 class="text-3xl lg:text-5xl font-bold pb-5 font-alfa-slab">
+        Why Rust Dublin
+      </h1>
       <div class="flex gap-3">
         <div class="flex flex-col items-center">
           <h4 class="font-semibold">Expert Speakers</h4>
