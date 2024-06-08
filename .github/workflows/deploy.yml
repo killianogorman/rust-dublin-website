@@ -11,8 +11,6 @@ on:
         - "**.mjs"
         - "src/**"
         - "public/**"
-    paths-ignore:
-        - '.github/workflows/build.yml'
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -33,7 +31,7 @@ jobs:
         with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-          package-manager: npm@latest
+          package-manager: bun@latest
 
   deploy:
     needs: build
