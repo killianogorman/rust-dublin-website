@@ -1,5 +1,18 @@
 ---
+interface Props {
+  title: string;
+  description: string;
+  author: string;
+  tags: Array<string>;
+  image: {
+    src: string;
+    alt: string;
+  };
+  pubDate:Date
+}
 import Layout from "./Layout.astro";
+
+const { title, description, author, tags, image,pubDate} = Astro.props;
 ---
 <Layout title={title} description={description} keywords="">
     <main class="pt-16 px-12 sm:px-28 text-lg">
@@ -25,11 +38,8 @@ import Layout from "./Layout.astro";
           </div>
         </div>
         <div>
-          <iframe
-            id="ytplayer"
-            width="222"
-            class=" w-full sm:w-96 h-48 relative drop-shadow-[6px_7px_rgba(0,0,0,1)] rounded-md"
-            src={makeYTurl(video_url)}></iframe>
+          <img width="222"
+          class=" w-full sm:w-96 h-48 relative drop-shadow-[6px_7px_rgba(0,0,0,1)] rounded-md" src={image.src} alt={image.alt}/>
         </div>
       </section>
       <section class=" pt-5 border-t-[1px] border-dashed border-blk flex justify-around">
@@ -39,15 +49,6 @@ import Layout from "./Layout.astro";
       <section class="flex pt-32">
         <div class=" flex flex-wrap w-full"><slot /></div>
         <div>
-        <!-- Table of Contents -->
-        {
-          headings && headings.length > 0 && (
-            <nav class="article-toc">
-              <h3>Table of Content</h3>
-              <TableOfContents headings={headings} />
-            </nav>
-          )
-        }
         </div>
       </section>
     </main>
