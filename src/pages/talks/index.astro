@@ -5,9 +5,9 @@ const allPosts = await getCollection("talks");
 ---
 
 <Layout title="" description="" keywords="">
-  <main class="pt-36 px-44 lg:px-60 pb-16 min-h-[55vh] w-full text-blk">
+  <main class="pt-36 px-16 lg:px-60 pb-16 min-h-[55vh] w-full text-blk">
     <div class="w-full border-b-[1px] border-dashed border-blk pb-6 mb-8">
-        <h1 class="text-7xl font-alfa-slab pb-4">Talks Archive</h1>
+        <h1 class="text-4xl sm:text-7xl font-alfa-slab pb-4">Talks Archive</h1>
         <p>Here is all the info relating to talks done for Rust dublin.</p>
         <p>Each talk is organized by date and speaker, with links to slides, videos, and other resources where available. Browse through our catalog to discover insightful discussions and deep dives into various Rust topics presented by our community members.</p>
         <aside class="pt-3">Done a talk? Not Listed? If your talk isnt listed please go to <a href="https://gihub.com/rust-dublin/website" class=" underline">gihub.com/rust-dublin/website</a> and open a pull request.</aside>
@@ -35,7 +35,7 @@ const allPosts = await getCollection("talks");
                 </div>
                 {/* Title Description */}
                 <div class="flex flex-col">
-                  <h1 class=" text-4xl pb-3 font-alfa-slab">{e.data.title}</h1>
+                  <h1 class="text-2xl sm:text-4xl pb-3 font-alfa-slab">{e.data.title}</h1>
                   <p>{e.data.description}</p>
                 </div>
                 {/* Author */}
