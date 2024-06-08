@@ -8,7 +8,7 @@ on:
     - "**/*.json"
     - "**/*.yml"
     branches:
-      - published
+      - publish
 
 jobs:
   check_profanity:
