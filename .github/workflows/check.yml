@@ -5,6 +5,8 @@ on:
     - "**.md"
     - "**.mdx"
     - "**.json"
+    - "README"
+    - "**.toml"
     branches:
       - main
 
