@@ -1,4 +1,4 @@
-# Rust Dublin Website
+# 🦀 Rust Dublin Website
 The public facing website for rust dublin (rustdublin.dev)
 
 ## Become a sponsor
