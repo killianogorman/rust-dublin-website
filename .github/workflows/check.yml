@@ -1,14 +1,15 @@
 name: Check Markdown and Text files for profanity
+
 on:
   push:
     branches:
       - main
     paths:
-      - '**.md'
-      - '**.mdx'
-      - '**.json'
+      - '**/*.md'
+      - '**/*.mdx'
+      - '**/*.json'
       - 'README'
-      - '**.toml'
+      - '**/*.toml'
 
 jobs:
   setup_environment:
@@ -23,17 +24,15 @@ jobs:
         with:
           toolchain: stable
           override: true
-
       - name: Set up cargo cache
         uses: actions/cache@v3
-        continue-on-error: false
         with:
           path: |
             ~/.cargo/bin/
             ~/.cargo/registry/index/
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
-            target/            
+            target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
 
@@ -48,6 +47,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
+          echo "Changed files: ${ALL_CHANGED_FILES}"
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
