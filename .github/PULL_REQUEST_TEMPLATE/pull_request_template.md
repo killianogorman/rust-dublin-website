@@ -23,7 +23,7 @@
 title: ''
 pubDate: 2021-04-04
 description: ''
-author: ''
+author: 
 image:
   src: ''
   alt: ''
