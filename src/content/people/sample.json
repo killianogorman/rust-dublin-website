@@ -1,0 +1,15 @@
+{
+    "name": "Sample Person",
+    "bio":"I'm a fake... not a robot just a fake",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/t/7907862?s=116&v=4",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":"CEO",
+        "company_name":"Acme",
+        "company_bio":"Products for the best"
+    }
+}

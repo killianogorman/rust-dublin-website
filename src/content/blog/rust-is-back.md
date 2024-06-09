@@ -2,7 +2,7 @@
 title: 'Rust is back'
 pubDate: 2022-07-01
 description: 'You heard it rust is back'
-author: 'og'
+author: 'sample'
 image:
     src: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'

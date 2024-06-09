@@ -1,11 +1,11 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection, reference, z } from 'astro:content';
 const talksCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
-    author: z.string(),
+    author: reference('people'),
     image: z.object({
       src: z.string(),
       alt: z.string(),
@@ -17,7 +17,7 @@ const talksCollection = defineCollection({
   }),
 });
 const peopleCollection = defineCollection({
-  type: "content",
+  type: "data",
   schema: z.object({
     // slug: z.string(),
     name: z.string(),
@@ -29,9 +29,9 @@ const peopleCollection = defineCollection({
     tags: z.array(z.string()),
     urls: z.array(z.string()),
     company_info: z.object({
-      position: z.string(),
-      name: z.string(),
-      company_bio: z.string(),
+      position: z.nullable(z.string()),
+      company_name: z.nullable(z.string()),
+      company_bio: z.nullable(z.string()),
     }),
   }),
 });
@@ -41,7 +41,7 @@ const postsCollection = defineCollection({
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
-    author: z.string(),
+    author: reference('people'),
     image: z.object({
       src: z.string(),
       alt: z.string()

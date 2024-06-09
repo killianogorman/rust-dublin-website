@@ -2,7 +2,22 @@
 interface Props {
   title: string;
   description: string;
-  author: string;
+  aid: string;
+  author: {
+    image: {
+        alt: string;
+        url: string;
+    };
+    tags: string[];
+    name: string;
+    bio: string;
+    urls: string[];
+    company_info: {
+        position: string | null;
+        company_name: string | null;
+        company_bio: string | null;
+    };
+};
   tags: Array<string>;
   image: {
     src: string;
@@ -30,7 +45,8 @@ const {
   video_url,
   // slides_url,
   headings,
-  pubDate
+  pubDate,
+  aid
 } = Astro.props;
 ---
 
@@ -38,8 +54,8 @@ const {
   <main class="pt-16 px-12 sm:px-28 text-lg">
     <section class="flex flex-col sm:flex-row justify-between gap-12 pt-16 sm:pt-32 pb-16">
       <div class="sm:w-[55%] pr-11">
-        <p class="font-semibold">{author}</p>
-        <h1 class="font-alfa-slab text-3xl sm:text-4xl">{title}</h1>
+        <a href={"/speakers/"+aid} class="font-semibold">{author.name}</a>
+        <h1 class="pt-2 font-alfa-slab text-3xl sm:text-4xl">{title}</h1>
         <p>{description}</p>
         <div
           class="pt-3 pb-2 flex gap-3 text-sm uppercase w-full overflow-hidden flex-wrap"
@@ -67,10 +83,13 @@ const {
     </section>
     <section class=" pt-5 border-t-[1px] border-dashed border-blk flex justify-around">
       <p>{pubDate.toDateString()}</p>
-      <p>{author}</p>
+      <a href={"/speakers/"+aid} class="flex flex-row items-center gap-4 ">
+        <img class="h-7 w-7 rounded-full overflow-clip hover:text-blk hover:drop-shadow-[3px_4px_rgba(220,20,60,1)] transition-all object-cover"src={author.image.url} alt={author.image.alt}/>
+        <span class="">{author.name}</span>
+      </a>
     </section>
     <section class="flex pt-32">
-      <div class=" flex flex-wrap w-full"><slot /></div>
+      <div class=" flex flex-wrap w-full sm:px-44 lg:text-xl"><slot /></div>
       <div>
       <!-- Table of Contents -->
       {

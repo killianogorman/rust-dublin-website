@@ -1,0 +1,16 @@
+---
+import { getCollection,getEntry } from 'astro:content';
+import Speaker from '../../layouts/Speaker.astro'
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('people');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+<Speaker id={entry.id} name={entry.data.name} bio={entry.data.bio} urls={entry.data.urls} tags={entry.data.tags} company_info={entry.data.company_info} image={entry.data.image} >
+
+</Speaker>
