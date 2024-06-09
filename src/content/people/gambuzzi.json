@@ -1,0 +1,15 @@
+{
+    "name": "Roberto Gambuzzi",
+    "bio":"25 year of writing code and 16 of writing python. Pragmatic developer ( or maybe just lazy :) )",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/u/1200081?v=4",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}

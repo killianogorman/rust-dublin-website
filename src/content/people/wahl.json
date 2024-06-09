@@ -1,0 +1,15 @@
+{
+    "name": "Matthias Wahl",
+    "bio":"ponylang.io and tremor.rs core team member, mediocre programmer, embarassing dad.",
+    "image":{
+        "url":"https://cdn.fosstodon.org/accounts/avatars/109/313/563/933/517/748/original/7cb45c7e7454cc0b.jpg",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}

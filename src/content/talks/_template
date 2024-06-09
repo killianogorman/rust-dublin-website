@@ -1,13 +1,13 @@
 ---
-    title: ''
-    pubDate: 2020-06-06
-    description: ''
-    author: 
-    image:
-        src: ''
-        alt: ''
-    video_url: ''
-    tags: [""]
-    event_location: ''
-    slides_url: ''
+title: 'Creating a Rust Project'
+pubDate: 2020-06-06
+description: 'How to init a rust project'
+author: sample
+image:
+    src: 'path/to/image.jpg'  # Ensure to provide a valid image path
+    alt: 'Description of the image'
+video_url: 'https://youtu.be/UFL82-4I6K8?si=6L_Y4iPGp3UZaYM8'
+tags: ["Rust", "2020", "Cargo","Project","Repo"]
+event_location: 'Online'
+slides_url: 'path/to/slides.pdf'  # Ensure to provide a valid URL for the slides
 ---

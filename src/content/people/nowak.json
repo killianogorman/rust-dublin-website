@@ -1,0 +1,15 @@
+{
+    "name": "Dawid Nowak",
+    "bio":"Rust and roll...",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/u/25728428?v=4",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}

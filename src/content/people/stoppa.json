@@ -1,0 +1,15 @@
+{
+    "name": "Emanuele Stoppa",
+    "bio":"Senior Software Engineer with multiple years of experience in web technologies.",
+    "image":{
+        "url":"https://media.licdn.com/dms/image/D4D03AQEtDO36idrqfA/profile-displayphoto-shrink_800_800/0/1686638553544?e=1723680000&v=beta&t=ZXdduNNSvIkHveRJbn75IzamJJxAhvaPYrOG34q0Jg0",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":"Senior Software Engineer",
+        "company_name":"Astro",
+        "company_bio":null
+    }
+}

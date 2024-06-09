@@ -1,0 +1,15 @@
+{
+    "name": "Ethan Brierley",
+    "bio":"I am an engineer from South East England focusing on Rust.\n\nI work TrueLayer and can often be found helping organise Rust London events.",
+    "image":{
+        "url":"https://pbs.twimg.com/profile_images/1629878468681842694/1GQhY9t2_400x400.jpg",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}
