@@ -1,0 +1,15 @@
+{
+    "name": "Ertuğrul Karademir",
+    "bio":"Rust enthusiast, back end heavy full stack developer.",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/u/329490",
+        "alt":"Ertuğrul Karademir"
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}

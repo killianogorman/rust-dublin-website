@@ -1,0 +1,15 @@
+{
+    "name": "Michael Barber",
+    "bio":"",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/u/60610888?v=4",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":"Principal Engineer",
+        "company_name":"FanDuel",
+        "company_bio":null
+    }
+}

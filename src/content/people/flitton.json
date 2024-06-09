@@ -1,0 +1,15 @@
+{
+    "name": "Maxwell Flitton",
+    "bio":"Nurse a physics grad, R&D software engineer in financial tech",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/u/17654010?v=4",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":"Software Engineer",
+        "company_name":"SurrealDB",
+        "company_bio":null
+    }
+}

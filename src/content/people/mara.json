@@ -1,0 +1,15 @@
+{
+    "name": "Lily Mara",
+    "bio":"Hi, I'm Lily (she/her)! I'm a software leader/developer in San Francisco, with a passion for making highly performant applications that never stop delivering value.",
+    "image":{
+        "url":"https://avatars.githubusercontent.com/u/6109875?v=4",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":"Engineering Manager",
+        "company_name":"OneSignal",
+        "company_bio":null
+    }
+}

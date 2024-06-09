@@ -1,0 +1,15 @@
+{
+    "name": "",
+    "bio":"",
+    "image":{
+        "url":"",
+        "alt":""
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}

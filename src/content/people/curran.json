@@ -1,0 +1,15 @@
+{
+    "name": "Shane Curran",
+    "bio":"",
+    "image":{
+        "url":"https://pbs.twimg.com/profile_images/1385231033197600770/9e2AisXB_400x400.jpg",
+        "alt":"Shane Curran"
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":"Founder | CEO",
+        "company_name":"Evervault",
+        "company_bio":"The data security and encryption platform built for developers."
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Jakub Pastuszek",
+    "bio":"I am a co-organiser of the Rust Dublin meetup where you can find me participating or presenting.\n\nI am interested in UNIX and Linux, programming, electronics and technology in general.\n\nI like coding in Rust. I used to code in Ruby, C, C++ and even in AVR assembly.\n\nI also like to think about privacy, freedom, energy and our future.",
+    "image":{
+        "url":"https://jpastuszek.net/jakub_pastuszek.jpg",
+        "alt":"Jakub Pastuszek"
+    },
+    "tags":[],
+    "urls":[],
+    "company_info":{
+        "position":null,
+        "company_name":null,
+        "company_bio":null
+    }
+}
