@@ -5,19 +5,19 @@ interface Props {
   aid: string;
   author: {
     image: {
-        alt: string;
-        url: string;
+      alt: string;
+      url: string;
     };
     tags: string[];
     name: string;
     bio: string;
     urls: string[];
     company_info: {
-        position: string | null;
-        company_name: string | null;
-        company_bio: string | null;
+      position: string | null;
+      company_name: string | null;
+      company_bio: string | null;
     };
-};
+  };
   tags: Array<string>;
   image: {
     src: string;
@@ -31,7 +31,7 @@ interface Props {
     text: string;
     depth: number;
   }[];
-  pubDate:Date
+  pubDate: Date;
 }
 import Layout from "./Layout.astro";
 import { makeYTurl } from "../functions/url";
@@ -46,15 +46,18 @@ const {
   // slides_url,
   headings,
   pubDate,
-  aid
+  aid,
 } = Astro.props;
+const tags_joined = tags.join(",")
 ---
 
-<Layout title={title} description={description} keywords="">
+<Layout title={`${title} | Rust Dublin`} description={description} keywords={tags_joined}>
   <main class="pt-16 px-12 sm:px-28 text-lg">
-    <section class="flex flex-col sm:flex-row justify-between gap-12 pt-16 sm:pt-32 pb-16">
+    <section
+      class="flex flex-col sm:flex-row justify-between gap-12 pt-16 sm:pt-32 pb-16"
+    >
       <div class="sm:w-[55%] pr-11">
-        <a href={"/speakers/"+aid} class="font-semibold">{author.name}</a>
+        <a href={"/speakers/" + aid} class="font-semibold">{author.name}</a>
         <h1 class="pt-2 font-alfa-slab text-3xl sm:text-4xl">{title}</h1>
         <p>{description}</p>
         <div
@@ -77,30 +80,110 @@ const {
         <iframe
           id="ytplayer"
           width="222"
-          class=" w-full sm:w-96 h-48 relative drop-shadow-[6px_7px_rgba(0,0,0,1)] rounded-md"
+          class="w-full sm:w-96 h-48 relative drop-shadow-[6px_7px_rgba(0,0,0,1)] rounded-md"
           src={makeYTurl(video_url)}></iframe>
       </div>
     </section>
-    <section class=" pt-5 border-t-[1px] border-dashed border-blk flex justify-around">
+    <section
+      class="pt-5 border-t-[1px] border-dashed border-blk flex justify-around"
+    >
       <p>{pubDate.toDateString()}</p>
-      <a href={"/speakers/"+aid} class="flex flex-row items-center gap-4 ">
-        <img class="h-7 w-7 rounded-full overflow-clip hover:text-blk hover:drop-shadow-[3px_4px_rgba(220,20,60,1)] transition-all object-cover"src={author.image.url} alt={author.image.alt}/>
+      <a href={"/speakers/" + aid} class="flex flex-row items-center gap-4">
+        <img
+          class="h-7 w-7 rounded-full overflow-clip hover:text-blk hover:drop-shadow-[3px_4px_rgba(220,20,60,1)] transition-all object-cover"
+          src={author.image.url}
+          alt={author.image.alt}
+        />
         <span class="">{author.name}</span>
       </a>
     </section>
-    <section class="flex pt-32">
-      <div class=" flex flex-wrap w-full sm:px-44 lg:text-xl"><slot /></div>
+    <section class="flex pt-28">
+      <article class="flex flex-col flex-wrap w-full sm:px-44 lg:text-xl pb-6">
+        <slot />
+      </article>
       <div>
-      <!-- Table of Contents -->
-      {
-        headings && headings.length > 0 && (
-          <nav class="article-toc">
-            <h3>Table of Content</h3>
-            <TableOfContents headings={headings} />
-          </nav>
-        )
-      }
+        <!-- Table of Contents -->
+        {
+          headings && headings.length > 0 && (
+            <nav class="article-toc">
+              <h3>Table of Content</h3>
+              <TableOfContents headings={headings} />
+            </nav>
+          )
+        }
       </div>
     </section>
   </main>
 </Layout>
+<style>
+  article {
+    h1 {
+      font-size: 2.0rem;
+      line-height: 2.25rem;
+      padding-top: 2.75rem;
+      padding-bottom: 1.25rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      line-height: 2rem;
+      padding-top: 2.75rem;
+      padding-bottom: 1.25rem;
+      /* font-weight: 700; */
+    }
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.50rem;
+      padding-top: 2.75rem;
+      padding-bottom: 1.25rem;
+      font-weight: 500;
+    }
+    h4 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 1.25rem;
+      font-weight: 500;
+    }
+    h5 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding-top: 2.75rem;
+      padding-bottom: 1.25rem;
+      font-weight: 400;
+    }
+    p {
+      padding-bottom: 1rem;
+    }
+    a {
+      text-decoration: underline;
+      text-decoration-thickness: 0.1rem;
+      transition: all 800ms;
+    }
+    a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 0.15rem;
+      transition: all 800ms;
+    }
+    img {
+      margin-left: auto;
+      margin-bottom: auto;
+    }
+
+    blockquote {
+    }
+    pre {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      code {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 0.75rem;
+        display: block;
+      }
+    }
+  }
+</style>

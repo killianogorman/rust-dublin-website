@@ -1,5 +1,6 @@
 ---
 layout: "../../layouts/Legal.astro"
+title: About | Rust Dublin
 ---
 # About Rust Dublin
 If you never heard about Rust (from http://www.rust-lang.org)
