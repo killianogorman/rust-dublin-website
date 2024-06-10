@@ -23,11 +23,10 @@ const { title,description,keywords } = Astro.props;
     <meta name="keywords" content={keywords} />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site:id" content="1467726470533754880" />
-    <meta name="twitter:creator" content="@nextjs" />
+    <meta name="twitter:creator" content="@RustDublin" />
     <meta name="twitter:creator:id" content="1467726470533754880" />
-    <meta name="twitter:title" content="Next.js" />
-    <meta name="twitter:description" content="The React Framework for the Web" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://nextjs.org/og.png" />
   </head>
   <body>
